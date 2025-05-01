@@ -1,0 +1,19 @@
+echo '{
+    "name": "OpenATBP Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "11"
+        },
+        "ghcr.io/devcontainers/features/mongodb:1": {}
+    },
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.java",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    }
+}' > devcontainer.json
